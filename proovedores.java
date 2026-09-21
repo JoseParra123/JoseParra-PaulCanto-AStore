@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 public class Proveedores { 
+=======
+// Archivo: proovedores.java
+public class proovedores { //[cite: 7, 10, 11]
+>>>>>>> Stashed changes
     private String ID_Proveedor;
     private String Razon_Social;
     private String Nombre_Contacto;

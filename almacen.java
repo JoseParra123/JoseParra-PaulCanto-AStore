@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 public class BodegaAlmacen { 
+=======
+// Archivo: almacen.java
+public class almacen { //[cite: 1, 10, 11]
+>>>>>>> Stashed changes
     private String ID_Bodega;
     private String Producto;
     private int Cantidad_En_Bodega;
@@ -20,7 +25,11 @@ public class BodegaAlmacen {
     public void setFecha_Caducidad(String Fecha_Caducidad) { this.Fecha_Caducidad = Fecha_Caducidad; }
 
     public void asignarUbicacion() {}
+<<<<<<< Updated upstream
     public void transferirATienda() {}
+=======
+    public void transferirAtienda() {} 
+>>>>>>> Stashed changes
     public void recibirEmbarque() {}
     public void realizarAuditoria() {}
     public void devolverAProveedor() {}

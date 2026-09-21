@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 public class Ventas { 
+=======
+// Archivo: ventas.java
+public class ventas { //[cite: 8, 10, 11]
+>>>>>>> Stashed changes
     private String Folio_Venta;
     private String Fecha_y_Hora;
     private String Vendedor_Asignado;

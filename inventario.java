@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 public class InventarioTienda { 
+=======
+// Archivo: inventario.java
+public class inventario { //[cite: 3, 10, 11]
+>>>>>>> Stashed changes
     private String Producto;
     private int Cantidad_En_Exhibicion;
     private int Stock_Minimo;

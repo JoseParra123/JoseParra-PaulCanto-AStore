@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 public class Productos { 
+=======
+// Archivo: productos.java
+public class productos { //[cite: 4, 10, 11]
+>>>>>>> Stashed changes
     private String Codigo_SKU;
     private String Nombre_Articulo;
     private String Descripcion;
