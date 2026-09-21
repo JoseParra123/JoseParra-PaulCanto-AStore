@@ -6,7 +6,7 @@ public class productos {
     public productos(String codigoSKU, String nombreArticulo, double precioLista) {
         this.codigoSKU = codigoSKU;
         this.nombreArticulo = nombreArticulo;
-        setPrecioLista(precioLista); // Aplica validación desde la construcción
+        setPrecioLista(precioLista);
     }
 
     public String getCodigoSKU() { return codigoSKU; }
@@ -16,13 +16,11 @@ public class productos {
     public void setNombreArticulo(String nombreArticulo) { this.nombreArticulo = nombreArticulo; }
 
     public double getPrecioLista() { return precioLista; }
-    
-    // Validación de Encapsulamiento requerida por la rúbrica
     public void setPrecioLista(double precioLista) {
         if (precioLista >= 0) {
             this.precioLista = precioLista;
         } else {
-            System.out.println("Error: El precio del producto no puede ser negativo.");
+            System.out.println("Error: El precio no puede ser negativo.");
         }
     }
 }
