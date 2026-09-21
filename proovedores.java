@@ -1,4 +1,4 @@
-public class Proveedores { 
+public class proovedores { 
     private String ID_Proveedor;
     private String Razon_Social;
     private String Nombre_Contacto;

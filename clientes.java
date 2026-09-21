@@ -1,4 +1,4 @@
-public class Clientes { 
+public class clientes { 
     private String Matricula_ID_Anahuac;
     private String Nombre_Completo;
     private String Correo_Institucional;

@@ -1,4 +1,4 @@
-public class Ventas { 
+public class ventas { 
     private String Folio_Venta;
     private String Fecha_y_Hora;
     private String Vendedor_Asignado;
