@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
 public class Clientes { 
-=======
-// Archivo: clientes.java
-public class clientes { //[cite: 2, 10, 11]
->>>>>>> Stashed changes
     private String Matricula_ID_Anahuac;
     private String Nombre_Completo;
     private String Correo_Institucional;
@@ -33,12 +28,9 @@ public class clientes { //[cite: 2, 10, 11]
     public void asignarNombreCliente() {}
     public void vincularCorreoInstitucional() {}
     public void validarCredencialDigital() {}
-<<<<<<< Updated upstream
     public void escanearQRApp() {}
     public void acumularPuntos() {}
     public void redimirPuntos() {}
-=======
->>>>>>> Stashed changes
     public void aplicarDescuentoPerfil() {}
     public void procesarPagoNomina() {}
     public void consultarHistorial() {}

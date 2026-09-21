@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
 public class Promociones { 
-=======
-// Archivo: promociones.java
-public class promociones { //[cite: 6, 10, 11]
->>>>>>> Stashed changes
     private String Codigo_Promocion;
     private String Nombre_Campana;
     private String Descripcion_Regla;
