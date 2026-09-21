@@ -1,4 +1,4 @@
-public class Proveedores { //[cite: 7, 9]
+public class Proveedores { 
     private String ID_Proveedor;
     private String Razon_Social;
     private String Nombre_Contacto;

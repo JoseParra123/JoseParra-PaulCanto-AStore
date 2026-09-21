@@ -1,4 +1,4 @@
-public class InventarioTienda { //[cite: 3, 9]
+public class InventarioTienda { 
     private String Producto;
     private int Cantidad_En_Exhibicion;
     private int Stock_Minimo;

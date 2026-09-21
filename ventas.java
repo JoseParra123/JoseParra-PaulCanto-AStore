@@ -1,4 +1,4 @@
-public class Ventas { //[cite: 8, 9]
+public class Ventas { 
     private String Folio_Venta;
     private String Fecha_y_Hora;
     private String Vendedor_Asignado;

@@ -1,4 +1,4 @@
-public class Maquinas { //[cite: 5, 9]
+public class Maquinas { 
     private String ID_Equipo;
     private String Nombre_Terminal;
     private String IP_Red;

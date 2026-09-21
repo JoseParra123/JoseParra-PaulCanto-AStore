@@ -1,4 +1,4 @@
-public class Promociones { //[cite: 6, 9]
+public class Promociones { 
     private String Codigo_Promocion;
     private String Nombre_Campana;
     private String Descripcion_Regla;

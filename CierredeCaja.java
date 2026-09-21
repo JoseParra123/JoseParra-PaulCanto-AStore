@@ -1,4 +1,4 @@
-public class CierreDeCaja { //[cite: 9]
+public class CierreDeCaja { 
     private String Folio_Corte;
     private String Responsable_Caja;
     private String Terminal_Asignada;

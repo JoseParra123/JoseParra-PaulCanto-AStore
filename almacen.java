@@ -1,4 +1,4 @@
-public class BodegaAlmacen { //[cite: 1, 9]
+public class BodegaAlmacen { 
     private String ID_Bodega;
     private String Producto;
     private int Cantidad_En_Bodega;

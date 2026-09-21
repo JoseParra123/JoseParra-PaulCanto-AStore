@@ -1,4 +1,4 @@
-public class Productos { //[cite: 4, 9]
+public class Productos { 
     private String Codigo_SKU;
     private String Nombre_Articulo;
     private String Descripcion;

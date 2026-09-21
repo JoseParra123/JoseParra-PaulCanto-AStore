@@ -1,4 +1,4 @@
-public class Personal { //[cite: 9]
+public class Personal { 
     private String ID_Empleado;
     private String Nombre_Completo;
     private String CURP_RFC;

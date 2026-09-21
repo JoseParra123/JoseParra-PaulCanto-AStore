@@ -1,4 +1,4 @@
-public class Facturacion { //[cite: 9]
+public class Facturacion { 
     private String Folio_Fiscal_UUID;
     private String RFC_Cliente;
     private String Razon_Social;
