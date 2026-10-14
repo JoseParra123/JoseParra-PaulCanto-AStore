@@ -1,4 +1,4 @@
-public class Maquinas { //[cite: 5, 9]
+public class Maquinas implements Guardable { 
     private String ID_Equipo;
     private String Nombre_Terminal;
     private String IP_Red;
@@ -19,13 +19,27 @@ public class Maquinas { //[cite: 5, 9]
     public String getUbicacion() { return Ubicacion; }
     public void setUbicacion(String Ubicacion) { this.Ubicacion = Ubicacion; }
 
-    public void asignarNombreEquipo() {}
-    public void configurarIP() {}
-    public void iniciarSesion() {}
-    public void reportarFalla() {}
-    public void imprimirTicket() {}
-    public void calibrarLector() {}
-    public void solicitarMantenimiento() {}
-    public void reiniciarTerminal() {}
-    public void actualizarSoftware() {}
+    public void asignarNombreEquipo() { registrarAccion("asignarNombreEquipo"); }
+    public void configurarIP() { registrarAccion("configurarIP"); }
+    public void iniciarSesion() { registrarAccion("iniciarSesion"); }
+    public void reportarFalla() { registrarAccion("reportarFalla"); }
+    public void imprimirTicket() { registrarAccion("imprimirTicket"); }
+    public void calibrarLector() { registrarAccion("calibrarLector"); }
+    public void solicitarMantenimiento() { registrarAccion("solicitarMantenimiento"); }
+    public void reiniciarTerminal() { registrarAccion("reiniciarTerminal"); }
+    public void actualizarSoftware() { registrarAccion("actualizarSoftware"); }
+
+
+    @Override
+    public String getNombreArchivo() { return "maquinas"; }
+
+    @Override
+    public String[] getEncabezados() {
+        return new String[] { "ID_Equipo", "Nombre_Terminal", "IP_Red", "Tipo_Maquinaria", "Estado_Operativo", "Ubicacion" };
+    }
+
+    @Override
+    public String[] getValores() {
+        return new String[] { ID_Equipo, Nombre_Terminal, IP_Red, Tipo_Maquinaria, Estado_Operativo, Ubicacion };
+    }
 }
