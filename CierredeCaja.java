@@ -1,4 +1,4 @@
-public class CierreDeCaja { //[cite: 9]
+public class CierredeCaja implements Guardable { 
     private String Folio_Corte;
     private String Responsable_Caja;
     private String Terminal_Asignada;
@@ -25,12 +25,27 @@ public class CierreDeCaja { //[cite: 9]
     public double getDiferencia_Faltante_Sobrante() { return Diferencia_Faltante_Sobrante; }
     public void setDiferencia_Faltante_Sobrante(double Diferencia_Faltante_Sobrante) { this.Diferencia_Faltante_Sobrante = Diferencia_Faltante_Sobrante; }
 
-    public void asignarResponsable() {}
-    public void abrirTurno() {}
-    public void realizarRetiroParcial() {}
-    public void realizarArqueoCiego() {}
-    public void compararIngresos() {}
-    public void cerrarTurno() {}
-    public void generarReporteZ() {}
-    public void notificarDiferencia() {}
+    public void asignarResponsable() { registrarAccion("asignarResponsable"); }
+    public void abrirTurno() { registrarAccion("abrirTurno"); }
+    public void realizarRetiroParcial() { registrarAccion("realizarRetiroParcial"); }
+    public void realizarArqueoCiego() { registrarAccion("realizarArqueoCiego"); }
+    public void compararIngresos() { registrarAccion("compararIngresos"); }
+    public void cerrarTurno() { registrarAccion("cerrarTurno"); }
+    public void generarReporteZ() { registrarAccion("generarReporteZ"); }
+    public void notificarDiferencia() { registrarAccion("notificarDiferencia"); }
+
+    // ---- Guardado en "usuario" ----
+    // Esta clase no tiene constructor: llena el objeto con sus setters y llama a guardar() al terminar.
+    @Override
+    public String getNombreArchivo() { return "cierre_de_caja"; }
+
+    @Override
+    public String[] getEncabezados() {
+        return new String[] { "Folio_Corte", "Responsable_Caja", "Terminal_Asignada", "Dinero_Inicial", "Total_Efectivo", "Total_Tarjeta", "Total_Credencial", "Diferencia_Faltante_Sobrante" };
+    }
+
+    @Override
+    public String[] getValores() {
+        return new String[] { Folio_Corte, Responsable_Caja, Terminal_Asignada, String.valueOf(Dinero_Inicial), String.valueOf(Total_Efectivo), String.valueOf(Total_Tarjeta), String.valueOf(Total_Credencial), String.valueOf(Diferencia_Faltante_Sobrante) };
+    }
 }
