@@ -1,4 +1,4 @@
-public class Facturacion { //[cite: 9]
+public class Facturacion implements Guardable { 
     private String Folio_Fiscal_UUID;
     private String RFC_Cliente;
     private String Razon_Social;
@@ -19,11 +19,25 @@ public class Facturacion { //[cite: 9]
     public String getUso_CFDI() { return Uso_CFDI; }
     public void setUso_CFDI(String Uso_CFDI) { this.Uso_CFDI = Uso_CFDI; }
 
-    public void asignarDatosFiscales() {}
-    public void validarRFC() {}
-    public void generarFactura() {}
-    public void timbrarSAT() {}
-    public void enviarXML_PDF() {}
-    public void cancelarFactura() {}
-    public void consultarHistorial() {}
+    public void asignarDatosFiscales() { registrarAccion("asignarDatosFiscales"); }
+    public void validarRFC() { registrarAccion("validarRFC"); }
+    public void generarFactura() { registrarAccion("generarFactura"); }
+    public void timbrarSAT() { registrarAccion("timbrarSAT"); }
+    public void enviarXML_PDF() { registrarAccion("enviarXML_PDF"); }
+    public void cancelarFactura() { registrarAccion("cancelarFactura"); }
+    public void consultarHistorial() { registrarAccion("consultarHistorial"); }
+
+
+    @Override
+    public String getNombreArchivo() { return "facturacion"; }
+
+    @Override
+    public String[] getEncabezados() {
+        return new String[] { "Folio_Fiscal_UUID", "RFC_Cliente", "Razon_Social", "Direccion_Fiscal", "Correo_Envio", "Uso_CFDI" };
+    }
+
+    @Override
+    public String[] getValores() {
+        return new String[] { Folio_Fiscal_UUID, RFC_Cliente, Razon_Social, Direccion_Fiscal, Correo_Envio, Uso_CFDI };
+    }
 }
