@@ -1,30 +1,46 @@
-public abstract class Persona {
+public abstract class Persona implements Guardable {
     private String id;
     private String nombreCompleto;
     private String telefono;
 
-    // Constructor
+}
     public Persona(String id, String nombreCompleto, String telefono) {
         this.id = id;
-        this.nombreCompleto = nombreCompleto;
         this.telefono = telefono;
+        
+        if (esNombreValido(nombreCompleto)) {
+            this.nombreCompleto = nombreCompleto;
+        } else {
+            GestorUsuario.error("El nombre no puede estar vacío.");
+        }
     }
 
     public Persona() {}
 
-    // Getters y Setters con encapsulamiento
+    
     public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public void setId(String id) {
+        this.id = id;
+        guardar();
+    }
 
     public String getNombreCompleto() { return nombreCompleto; }
     public void setNombreCompleto(String nombreCompleto) {
-        if (nombreCompleto != null && !nombreCompleto.trim().isEmpty()) {
+        if (esNombreValido(nombreCompleto)) {
             this.nombreCompleto = nombreCompleto;
+            guardar();
         } else {
-            System.out.println("Error: El nombre no puede estar vacío.");
+            GestorUsuario.error("El nombre no puede estar vacío.");
         }
     }
 
     public String getTelefono() { return telefono; }
-    public void setTelefono(String telefono) { this.telefono = telefono; }
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+        guardar();
+    }
+
+    private boolean esNombreValido(String nombre) {
+        return nombre != null && !nombre.trim().isEmpty();
+    }
 }
