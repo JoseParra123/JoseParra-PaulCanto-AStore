@@ -26,8 +26,6 @@ public class promociones implements Guardable {
     public void desactivarPromocion() { registrarAccion("desactivarPromocion"); }
     public void evaluarImpactoVentas() { registrarAccion("evaluarImpactoVentas"); }
 
-    // ---- Guardado en "usuario" ----
-    // Esta clase no tiene constructor: llena el objeto con sus setters y llama a guardar() al terminar.
     @Override
     public String getNombreArchivo() { return "promociones"; }
 
