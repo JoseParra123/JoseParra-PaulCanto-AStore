@@ -1,15 +1,3 @@
-#!/bin/bash
-# Sube las 15 ramas a GitHub y abre un Pull Request hacia main por cada una.
-#
-# Requisitos (una sola vez):
-#   1. Tener instalado Git y la herramienta de GitHub "gh":  https://cli.github.com
-#   2. Iniciar sesión:  gh auth login
-#   3. Estar dentro de la carpeta del repositorio donde existen las ramas locales.
-#
-# Uso:   bash documentacion/subir_ramas_y_crear_prs.sh
-#
-# El script NO une (merge) nada por su cuenta: solo sube las ramas y abre los PR.
-# Después, la otra persona revisa cada PR y los une EN ESTE ORDEN con "Create a merge commit".
 set -e
 
 REPO="JoseParra123/JoseParra-PaulCanto-AStore"
