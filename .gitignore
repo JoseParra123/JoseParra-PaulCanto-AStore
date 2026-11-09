@@ -1,0 +1,13 @@
+# Archivos compilados de Java
+out/
+*.class
+
+# Datos que genera el programa al ejecutarse (CSV e historial)
+datos/
+
+# Archivos de editores y sistema
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
