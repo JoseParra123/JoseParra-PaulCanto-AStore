@@ -1,5 +1,4 @@
-// Prueba automática de los cálculos del carrito (los mismos que hace la clase Java Carrito).
-// Ejecutar con:  node pruebas/carrito.test.js
+
 const assert = require('assert');
 const { calcularResumen } = require('../web/js/carrito.js');
 

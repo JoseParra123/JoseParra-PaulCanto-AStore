@@ -6,13 +6,7 @@ import astore.util.GestorUsuario;
 import java.time.LocalDate;
 import java.util.List;
 
-/**
- * Pruebas sencillas de todas las clases del proyecto (sin librerías externas).
- * Se ejecuta desde la carpeta raíz del proyecto:
- *   javac -cp out -d out pruebas/PruebasClases.java
- *   java -cp out PruebasClases
- * Escribe archivos CSV en la carpeta "datos", por eso conviene ejecutarlo en una carpeta de prueba.
- */
+
 public class PruebasClases {
     static int correctas = 0;
     static int fallidas = 0;
