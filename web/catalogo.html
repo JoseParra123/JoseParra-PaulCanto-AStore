@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo - A-Store Anáhuac Cancún</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="aviso-demo">Proyecto académico: los productos, precios e imágenes son de demostración.</div>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html"><span class="marca-a">A</span>-Store <small>Anáhuac Cancún</small></a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="activo">Catálogo</a>
+        <a href="informacion.html">Información</a>
+        <a href="carrito.html">Carrito <span id="contador-carrito" class="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor">
+      <h1 style="font-size:2rem">Catálogo</h1>
+
+      <div id="filtros" class="filtros" aria-label="Categorías"></div>
+
+      <div class="herramientas">
+        <input id="buscar" class="campo" type="search" placeholder="Buscar producto..." aria-label="Buscar producto">
+        <label class="casilla"><input id="solo-disponibles" type="checkbox"> Solo disponibles</label>
+      </div>
+
+      <p id="conteo" class="conteo"></p>
+      <div id="productos" class="rejilla-productos"></div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <strong>A-Store</strong> · Universidad Anáhuac Cancún
+      <p>Proyecto de la materia Lenguajes Orientados a Objetos. No es un sitio oficial de la universidad.</p>
+      <p>Créditos: José Parra y Paul Canto. · <a href="admin.html">Administración (demo)</a></p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

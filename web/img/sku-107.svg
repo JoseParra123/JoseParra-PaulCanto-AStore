@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Imagen de demostración: Libreta profesional">
+  <rect width="400" height="300" fill="#E7ECF2"/>
+  <circle cx="200" cy="125" r="62" fill="#34495E" opacity="0.92"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#ffffff">LP</text>
+  <text x="200" y="236" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#2B2B2D">Libreta profesional</text>
+  <text x="200" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.5" fill="#6B6B70">IMAGEN DE DEMOSTRACIÓN</text>
+</svg>
