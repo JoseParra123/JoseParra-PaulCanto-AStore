@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito - A-Store Anáhuac Cancún</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+  <div class="aviso-demo">Proyecto académico: no se realiza ningún cobro real. Los pedidos solo se guardan en un archivo local.</div>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html"><span class="marca-a">A</span>-Store <small>Anáhuac Cancún</small></a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="informacion.html">Información</a>
+        <a href="carrito.html" class="activo">Carrito <span id="contador-carrito" class="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor">
+      <div id="contenido-carrito">
+        <h1 style="font-size:2rem">Tu carrito</h1>
+        <div class="carrito-diseno">
+          <section id="lista-carrito" aria-live="polite"></section>
+
+          <aside id="resumen" class="resumen">
+            <h2>Resumen del pedido</h2>
+            <dl>
+              <div class="total-fila"><dt>Subtotal</dt><dd id="res-subtotal" style="margin:0">$0.00</dd></div>
+              <div class="total-fila descuento" id="fila-descuento" hidden><dt>Descuento</dt><dd id="res-descuento" style="margin:0">-$0.00</dd></div>
+              <div class="total-fila total-final"><dt>Total</dt><dd id="res-total" style="margin:0">$0.00</dd></div>
+            </dl>
+
+            <div class="promo">
+              <input id="codigo-promo" class="campo" type="text" placeholder="Código de promoción" aria-label="Código de promoción">
+              <button type="button" id="aplicar-promo" class="boton boton-secundario">Aplicar</button>
+            </div>
+            <p id="mensaje-promo" class="pista"></p>
+            <p class="pista">Códigos de ejemplo: BIENVENIDA10 (para todos) y LEONES15 (marca la casilla de estudiante).</p>
+
+            <form id="formulario-pedido" class="formulario">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" class="campo" type="text" required autocomplete="name">
+
+              <label for="correo">Correo</label>
+              <input id="correo" class="campo" type="email" required autocomplete="email">
+
+              <label for="metodo">Método de pago al recoger</label>
+              <select id="metodo" class="campo">
+                <option>Efectivo</option>
+                <option>Tarjeta</option>
+                <option>Credencial</option>
+              </select>
+
+              <label class="casilla"><input id="estudiante" type="checkbox"> Soy estudiante de la comunidad universitaria</label>
+
+              <div id="estado-pedido"></div>
+              <button type="submit" id="boton-pedido" class="boton boton-bloque" disabled>Confirmar pedido</button>
+            </form>
+          </aside>
+        </div>
+      </div>
+
+      <section id="confirmacion" class="confirmacion" hidden>
+        <h1 style="font-size:1.6rem">¡Pedido registrado!</h1>
+        <p class="folio" id="conf-folio"></p>
+        <p>Total: <strong id="conf-total"></strong></p>
+        <p style="color:var(--gris)">Este es un proyecto de demostración: el pedido quedó guardado en el servidor local y no se cobró nada.</p>
+        <a class="boton" href="catalogo.html">Seguir comprando</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <strong>A-Store</strong> · Universidad Anáhuac Cancún
+      <p>Proyecto de la materia Lenguajes Orientados a Objetos. No es un sitio oficial de la universidad.</p>
+      <p>Créditos: José Parra y Paul Canto. · <a href="admin.html">Administración (demo)</a></p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>
