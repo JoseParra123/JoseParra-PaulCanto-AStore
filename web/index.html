@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-Store Anáhuac Cancún</title>
+  <meta name="description" content="A-Store: proyecto académico de una tienda universitaria de la Universidad Anáhuac Cancún.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="aviso-demo">Proyecto académico: los productos, precios e imágenes son de demostración.</div>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html"><span class="marca-a">A</span>-Store <small>Anáhuac Cancún</small></a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="informacion.html">Información</a>
+        <a href="carrito.html">Carrito <span id="contador-carrito" class="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="contenedor">
+        <div class="portada-texto">
+          <p class="sobretitulo">Tienda universitaria</p>
+          <h1>Bienvenido a A-Store</h1>
+          <p>Playeras, sudaderas, termos, papelería y más para la comunidad de la Universidad Anáhuac Cancún.</p>
+          <div class="portada-botones">
+            <a class="boton boton-claro" href="catalogo.html">Ver catálogo</a>
+            <a class="boton boton-secundario" style="color:#fff;border-color:#fff" href="#categorias">Explorar categorías</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="categorias">
+      <div class="contenedor">
+        <div class="seccion-titulo"><h2>Compra por categoría</h2></div>
+        <div id="categorias-lista" class="rejilla-categorias"></div>
+      </div>
+    </section>
+
+    <section class="seccion" style="padding-top:0">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <h2>Productos destacados</h2>
+          <a href="catalogo.html">Ver todo el catálogo →</a>
+        </div>
+        <div id="destacados" class="rejilla-productos"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <strong>A-Store</strong> · Universidad Anáhuac Cancún
+      <p>Proyecto de la materia Lenguajes Orientados a Objetos. No es un sitio oficial de la universidad.</p>
+      <p>Créditos: José Parra y Paul Canto. · <a href="admin.html">Administración (demo)</a></p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script>
+    // Carga categorías y los primeros 4 productos disponibles desde el servidor Java
+    (async function () {
+      try {
+        var categorias = await pedirJSON('api/categorias');
+        var productos = await pedirJSON('api/productos');
+
+        document.getElementById('categorias-lista').innerHTML = categorias.map(function (c) {
+          return '<a class="categoria" href="catalogo.html?cat=' + encodeURIComponent(c.id) + '">' +
+            '<h3>' + escaparHTML(c.nombre) + '</h3><span>' + c.total + ' producto(s)</span></a>';
+        }).join('');
+
+        var destacados = productos.filter(function (p) { return p.disponible; }).slice(0, 4);
+        document.getElementById('destacados').innerHTML = destacados.map(crearTarjeta).join('');
+      } catch (e) {
+        document.getElementById('destacados').innerHTML = mensajeServidor();
+      }
+    })();
+  </script>
+</body>
+</html>

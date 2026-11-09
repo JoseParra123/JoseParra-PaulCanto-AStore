@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración - A-Store</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="aviso-demo">Panel de demostración sin contraseña: solo funciona en tu computadora (localhost).</div>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html"><span class="marca-a">A</span>-Store <small>Administración</small></a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="informacion.html">Información</a>
+        <a href="carrito.html">Carrito <span id="contador-carrito" class="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor">
+      <h1 style="font-size:2rem">Productos, precios y existencias</h1>
+      <p style="color:var(--gris)">Cambia el precio o la cantidad en exhibición y presiona Guardar. Los cambios se guardan en la carpeta <code>datos/</code>.</p>
+      <div id="estado"></div>
+      <div class="tabla-envoltura">
+        <table>
+          <thead><tr><th>SKU</th><th>Producto</th><th>Categoría</th><th>Precio ($)</th><th>Stock</th><th></th></tr></thead>
+          <tbody id="tabla-productos"></tbody>
+        </table>
+      </div>
+
+      <h2 style="margin-top:40px">Pedidos recibidos</h2>
+      <div class="tabla-envoltura">
+        <table>
+          <thead><tr><th>Folio</th><th>Fecha</th><th>Cliente</th><th>Pago</th><th>Estado</th><th>Total</th><th>Detalle</th></tr></thead>
+          <tbody id="tabla-pedidos"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <strong>A-Store</strong> · Universidad Anáhuac Cancún
+      <p>Créditos: José Parra y Paul Canto.</p>
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
